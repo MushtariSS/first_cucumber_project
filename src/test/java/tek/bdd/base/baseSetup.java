@@ -7,7 +7,7 @@ public class baseSetup {
     //Encapsulating driver instance
     private static WebDriver driver;
     public void setupBrowser(){
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.get("https://retail.tekschool-students.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
