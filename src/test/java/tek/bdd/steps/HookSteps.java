@@ -1,7 +1,7 @@
 package tek.bdd.steps;
 
 import io.cucumber.java.After;
-import org.junit.Before;
+import io.cucumber.java.Before;
 import tek.bdd.utility.SeleniumUtility;
 
 public class HookSteps extends SeleniumUtility {
