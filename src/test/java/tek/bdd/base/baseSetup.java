@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 public class baseSetup {
     //Encapsulating driver instance
-    private static WebDriver driver;
+    public static WebDriver driver;
     public void setupBrowser(){
         driver = new ChromeDriver();
         driver.get("https://retail.tekschool-students.com/");
