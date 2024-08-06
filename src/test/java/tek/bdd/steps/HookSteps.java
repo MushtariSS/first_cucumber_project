@@ -12,7 +12,6 @@ public class HookSteps extends SeleniumUtility {
     public void beforeEachScenario() {
         setupBrowser();
     }
-
     @After
     public void afterEachScenario(Scenario scenario) {
         if (scenario.isFailed()) {

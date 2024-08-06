@@ -37,6 +37,7 @@ public class SeleniumUtility extends baseSetup {
     public boolean isElementDisplayed(By locator) {
         return waitForVisibility(locator).isDisplayed();
     }
+
     public byte[] takeScreenShot(){
         TakesScreenshot screenshot = (TakesScreenshot)getDriver();
         screenshot.getScreenshotAs(OutputType.BYTES);

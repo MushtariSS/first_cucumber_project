@@ -10,7 +10,6 @@ import tek.bdd.utility.SeleniumUtility;
 
 public class CreateNewAccountSteps extends SeleniumUtility {
         private static String emailToUse;
-
         @When("user enter {string} and {string}  and {string}")
         public void userEnterNewAccountInfo(String name, String email, String password) {
 
@@ -26,7 +25,6 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         @Then("validate user is in account page")
         public void validateUserInAccountPage() {
             String actualText  = getElementText(AccountPage.PROFILE_PAGE_TITLE);
-
             Assert.assertEquals("Account page should contains Your Profile Text"
                     ,"Your Profile", actualText);
         }

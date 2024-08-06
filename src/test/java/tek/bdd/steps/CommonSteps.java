@@ -12,12 +12,9 @@ public class CommonSteps extends SeleniumUtility {
         clickElement(By.linkText(linkText));
     }
 
-
     @When("user click on {string} button")
     public void user_click_on_button(String buttonVisibleText) {
-
         String buttonXpath = "//button[text()='" + buttonVisibleText + "']";
-
         clickElement(By.xpath(buttonXpath));
 
     }
