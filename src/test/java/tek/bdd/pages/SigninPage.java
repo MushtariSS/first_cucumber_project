@@ -1,5 +1,6 @@
 package tek.bdd.pages;
 
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 
 public class SigninPage {
@@ -10,4 +11,8 @@ public class SigninPage {
     public static final By PASSWORD_INPUT = By.name("password");
 
     public static final By LOGIN_BUTTON = By.id("loginBtn");
+
+    public static final By ERROR_MESSAGE = By.className("error");
+
 }
+
