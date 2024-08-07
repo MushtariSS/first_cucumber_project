@@ -33,3 +33,12 @@ Given user click on "Create New Account" link
       When user click on "Sign Up" button
       Then validate user is in account page
       Then validate email address in account page match
+@UsingListOfMaps
+  Scenario: using list of Maps
+    When user enter new account as list of list
+      |Name | random| Password|
+      |Muhammad|random|Password123|
+      |John    |random|john123|
+    When user click on "Sign Up" button
+    Then validate user is in account page
+    Then validate email address in account page match

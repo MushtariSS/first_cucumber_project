@@ -1,5 +1,6 @@
 package tek.bdd.steps;
 
+import com.google.common.collect.Maps;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -66,17 +67,29 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         sendText(SignupPage.NAME_INPUT, name);
     }
     @When("user enter new account as list of list")
-    public void userEnterMewAccountAslistOfList(DataTable dataTable){
-            //Convert table into a list of list
+    public void userEnterMewAccountAslistOfList(DataTable dataTable) {
+        //Convert table into a list of list
         List<List<String>> data = dataTable.asLists();
         String name = data.get(0).get(0);
         String email = data.get(1).get(1);
         String password = data.get(2).get(2);
-        emailToUse  = email.equalsIgnoreCase("random")?RandomGenerator.generateRandomEmail():email;
+        emailToUse = email.equalsIgnoreCase("random") ? RandomGenerator.generateRandomEmail() : email;
         sendText(SignupPage.EMAIL_INPUT, emailToUse);
         sendText(SignupPage.PASSWORD_INPUT, password);
         sendText(SignupPage.CONFIRM_PASSWORD, password);
         sendText(SignupPage.NAME_INPUT, name);
-
+    }
+    @When("user enter new account as list of Maps")
+    public void userEnterMewAccountAslistOfMap(DataTable dataTable) {
+        //Convert table into a list of maps
+        List<Map<String, String>> data = dataTable.asMaps();
+        String name = data.get(0).get("name");
+        String email = data.get(1).get("email");
+        String password = data.get(2).get("password");
+        emailToUse = email.equalsIgnoreCase("random") ? RandomGenerator.generateRandomEmail() : email;
+        sendText(SignupPage.EMAIL_INPUT, emailToUse);
+        sendText(SignupPage.PASSWORD_INPUT, password);
+        sendText(SignupPage.CONFIRM_PASSWORD, password);
+        sendText(SignupPage.NAME_INPUT, name);
     }
 }
