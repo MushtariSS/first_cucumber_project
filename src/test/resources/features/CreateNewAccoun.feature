@@ -1,13 +1,13 @@
  @Regression
-Feature: Create new account functionality
-  Background:Setup create account scenarios
+ Feature: Create new account functionality
+ Background:Setup create account scenarios
   #Steps that are common between Scenarios of specific feature
     #Background steps will execute at beginning of each scenario
     #Hooks execute first than background will be executed
     #Background is optional
-    Given user click on "Sign in" link
-    Then validate user is in sign in page
-    Given user click on "Create New Account" link
+ Given user click on "Sign in" link
+ Then validate user is in sign in page
+ Given user click on "Create New Account" linkFea
 
 
   Scenario: create valid account with random email
