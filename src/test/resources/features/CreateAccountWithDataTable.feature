@@ -12,7 +12,7 @@ Given user click on "Create New Account" link
     When user enter new account info
     |name    |Mushtari|
     |email   | random |
-    |password|Password123|
+    |password|"Romin0421!"|
     When user click on "Sign Up" button
     Then validate user is in account page
     Then validate email address in account page match
@@ -21,7 +21,7 @@ Given user click on "Create New Account" link
     When user enter new account info
       |Mushtari|
       | email |
-      |Password123|
+      |"Romin0421!"|
     When user click on "Sign Up" button
     Then validate user is in account page
     Then validate email address in account page match
