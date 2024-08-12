@@ -1,6 +1,6 @@
 Feature: Account profile feature
 
-  Background: Login to to account and setups
+  Background: Login to  account and setups
     Given user click on "Sign in" link
     Then validate user is in sign in page
     When user enter "angle@gmail.com" on "Email" field
