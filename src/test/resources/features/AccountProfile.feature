@@ -17,7 +17,7 @@ Feature: Account profile feature
     When user click on "Update" button
     Then validate Toast Displayed
     When wait for 5 seconds
-    Then validate account name is "Mohammad"
+    Then validate account name is "Mushtari"
     When user enter "John" on "Name" field
     When user enter "1023022536" on "Phone Number" field
     When user click on "Update" button
