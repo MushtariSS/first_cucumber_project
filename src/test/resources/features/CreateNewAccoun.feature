@@ -7,7 +7,7 @@
     #Background is optional
  Given user click on "Sign in" link
  Then validate user is in sign in page
- Given user click on "Create New Account" linkFea
+ Given user click on "Create New Account" link
 
 
   Scenario: create valid account with random email
