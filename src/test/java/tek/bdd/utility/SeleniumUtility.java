@@ -12,6 +12,7 @@ import tek.bdd.base.baseSetup;
 
 
 import java.time.Duration;
+import java.util.List;
 
 public class SeleniumUtility extends baseSetup {
     private WebDriverWait getWait(){
@@ -23,6 +24,10 @@ public class SeleniumUtility extends baseSetup {
     //create method to click on given locator
     public void clickElement(By locator){
         getWait().until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+    public void clickOnElement(WebElement locator) {
+        getWait().until(ExpectedConditions.elementToBeClickable(locator))
+                .click();
     }
 
     public void sendText(By locator,String value){
@@ -45,6 +50,9 @@ public class SeleniumUtility extends baseSetup {
         TakesScreenshot screenshot = (TakesScreenshot)getDriver();
         screenshot.getScreenshotAs(OutputType.BYTES);
         return screenshot.getScreenshotAs(OutputType.BYTES);
+    }
+    public List<WebElement> getElements(By locator) {
+        return getWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 }
 

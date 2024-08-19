@@ -22,3 +22,20 @@ Feature: Account profile feature
     When user enter "1023022536" on "Phone Number" field
     When user click on "Update" button
     Then validate Toast Displayed
+
+    @UserStory6
+    Scenario: Change user password and validate
+      Then validate user is in account page
+      When user enter "Romin0421!" on "Previous Password" field
+      When user enter "Romin2021!!" on "New Password" field
+      When user enter "Romin2021!!" on "Confirm Password" field
+      When user click on "Change Password" button
+      Then validate Toast Displayed
+      When wait for 6 seconds
+      When user enter "Romin2021!!" on "Previous Password" field
+      When user enter "Romin0421!" on "New Password" field
+      When user enter "Romin0421!" on "Confirm Password" field
+      When user click on "Change Password" button
+      Then validate Toast Displayed
+
+

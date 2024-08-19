@@ -19,7 +19,7 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         public void userEnterNewAccountInfo(String name, String email, String password) {
 
             emailToUse = email.equalsIgnoreCase("random")
-                    ? RandomGenerator.generateRandomEmail() : email;
+                    ? RandomGenerator.generateRandomPassword() : email;
 
             sendText(SignupPage.NAME_INPUT, name);
             sendText(SignupPage.EMAIL_INPUT, emailToUse);
@@ -47,7 +47,7 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         String email = data.get("email");
         String name = data.get("name");
         String password = data.get("password");
-        emailToUse  = email.equalsIgnoreCase("random")?RandomGenerator.generateRandomEmail():email;
+        emailToUse  = email.equalsIgnoreCase("random")?RandomGenerator.generateRandomPassword():email;
         sendText(SignupPage.NAME_INPUT, name);
         sendText(SignupPage.EMAIL_INPUT, emailToUse);
         sendText(SignupPage.PASSWORD_INPUT, password);
@@ -60,7 +60,7 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         String name=data.get(0);
         String email=data.get(1);
         String password=data.get(2);
-        emailToUse  = email.equalsIgnoreCase("random")?RandomGenerator.generateRandomEmail():email;
+        emailToUse  = email.equalsIgnoreCase("random")?RandomGenerator.generateRandomPassword():email;
         sendText(SignupPage.EMAIL_INPUT, emailToUse);
         sendText(SignupPage.PASSWORD_INPUT, password);
         sendText(SignupPage.CONFIRM_PASSWORD, password);
@@ -73,7 +73,7 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         String name = data.get(0).get(0);
         String email = data.get(1).get(1);
         String password = data.get(2).get(2);
-        emailToUse = email.equalsIgnoreCase("random") ? RandomGenerator.generateRandomEmail() : email;
+        emailToUse = email.equalsIgnoreCase("random") ? RandomGenerator.generateRandomPassword() : email;
         sendText(SignupPage.EMAIL_INPUT, emailToUse);
         sendText(SignupPage.PASSWORD_INPUT, password);
         sendText(SignupPage.CONFIRM_PASSWORD, password);
@@ -86,7 +86,7 @@ public class CreateNewAccountSteps extends SeleniumUtility {
         String name = data.get(0).get("name");
         String email = data.get(1).get("email");
         String password = data.get(2).get("password");
-        emailToUse = email.equalsIgnoreCase("random") ? RandomGenerator.generateRandomEmail() : email;
+        emailToUse = email.equalsIgnoreCase("random") ? RandomGenerator.generateRandomPassword() : email;
         sendText(SignupPage.EMAIL_INPUT, emailToUse);
         sendText(SignupPage.PASSWORD_INPUT, password);
         sendText(SignupPage.CONFIRM_PASSWORD, password);
