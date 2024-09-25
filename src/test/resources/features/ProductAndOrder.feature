@@ -1,8 +1,9 @@
 Feature: This feature to validate everything related to product and order
+
   @UserStory7
-  Scenario Outline: validate search result for a searched keyword
-    When user enter "SearchedKeyWord" on search bar and click search
-    Then validate search result containes "SearchedKeyWord" for all product
+  Scenario Outline: Validate search result for a searched keyword
+    When user enter "<SearchKeyWord>" on search bar and click search
+    Then validate search result contains "<SearchKeyWord>" for all products
     Examples:
       | SearchKeyWord |
       | TV            |
@@ -12,16 +13,17 @@ Feature: This feature to validate everything related to product and order
       | LED           |
       | LG            |
       | Sony          |
+
   @UserStory8
-  Scenario: Add product in card and delete
+  Scenario: Add product in cart and delete
     Given user click on "Sign in" link
     Then validate user is in sign in page
-    When user enter "angle@gmail.com" on "Email" field
-    When user enter "Romin0421!" on "Password" field
+    When user enter "angle-tek@gmail.com" on "Email" field
+    When user enter "Tekangle123!" on "Password" field
     When user click on "Login" button
     Then user should be able to see account link
     When user enter "TV" on search bar and click search
-    Then validate search result containes "TV" for all product
+    Then validate search result contains "TV" for all products
     When user click on first item in search result
     When user click on "Add to Cart" button
     When user click on cart link

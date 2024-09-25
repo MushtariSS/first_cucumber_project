@@ -11,10 +11,9 @@ import tek.bdd.pages.HomePage;
 import tek.bdd.utility.SeleniumUtility;
 
 public class CommonSteps extends SeleniumUtility {
-
     @Given("user click on {string} link")
     public void userClickOnLinks(String linkText) {
-        clickElement(By.linkText(linkText));
+        clickOnElement(By.linkText(linkText));
     }
 
 
@@ -22,21 +21,23 @@ public class CommonSteps extends SeleniumUtility {
     public void user_click_on_button(String buttonVisibleText) {
         try {
             String buttonXpath = "//button[text()='" + buttonVisibleText + "']";
-            clickElement(By.xpath(buttonXpath));
+            clickOnElement(By.xpath(buttonXpath));
         } catch (TimeoutException ex) {
             String buttonXpath = "//*[text()='" + buttonVisibleText + "']/..";
-            clickElement(By.xpath(buttonXpath));
+            clickOnElement(By.xpath(buttonXpath));
         }
+
     }
+
     @When("user enter {string} on {string} field")
     public void userEnterTextToAnyField(String text, String fieldName) {
-        String xpath = " //label[text()='"+fieldName+"']/..//input";
+        String xpath = " //label[text()='" + fieldName + "']/..//input";
         sendText(By.xpath(xpath), text);
     }
 
     @Then("validate Toast Displayed")
     public void validate_toast_displayed() {
-        boolean isToastDisplayed  = isElementDisplayed(AccountPage.TOAST_BOX);
+        boolean isToastDisplayed = isElementDisplayed(AccountPage.TOAST_BOX);
         Assert.assertTrue("Toast Should Displayed", isToastDisplayed);
     }
 
@@ -48,11 +49,13 @@ public class CommonSteps extends SeleniumUtility {
             Thread.currentThread().interrupt();
         }
     }
-        @When("user click on cart link")
-        public void user_click_on_cart_link() {
-        clickElement(HomePage.CART_LINK);
-        }
+
+    @When("user click on cart link")
+    public void user_click_on_cart_link() {
+        clickOnElement(HomePage.CART_LINK);
     }
 
+
+}
 
 

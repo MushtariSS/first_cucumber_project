@@ -1,11 +1,8 @@
 package tek.bdd.steps;
 
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 import tek.bdd.pages.AccountPage;
-import tek.bdd.pages.HomePage;
-import tek.bdd.utility.RandomGenerator;
 import tek.bdd.utility.SeleniumUtility;
 
 public class AccountProfileSteps extends SeleniumUtility {
@@ -18,7 +15,6 @@ public class AccountProfileSteps extends SeleniumUtility {
                 expectedProfileName,
                 actualProfileName);
     }
-
 }
 
 
