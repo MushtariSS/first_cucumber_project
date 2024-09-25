@@ -1,6 +1,6 @@
 package tek.bdd.steps;
 
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -17,7 +17,6 @@ public class SetupTestSteps extends SeleniumUtility {
     public void validateSigninBtnIsEnabled() {
         WebElement signinButton = driver.findElement(By.id("signinLink"));
         boolean isSigninBtnEnabled = signinButton.isEnabled();
-        //boolean isSigninBtnEnabled = IsEnabled(By.id("signinLink"));
         Assert.assertTrue(isSigninBtnEnabled);
     }
 

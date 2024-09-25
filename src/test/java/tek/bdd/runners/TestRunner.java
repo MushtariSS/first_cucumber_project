@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "classpath:features",
         glue = "tek.bdd.steps", //Package for all the steps
         dryRun = false,//set to true to scan feature for unimplemented steps
-        tags = " @UserStory8",
+        tags = "@Regression",
         plugin = {"html:target/cucumber_report/index.html"}
 )
 public class TestRunner {
